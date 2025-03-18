@@ -77,14 +77,14 @@ dotnet run
 
 ## 📦 Estrutura do Projeto
 
-src/
-├── Controllers/ # Controladores da API
-├── Services/ # Lógica de negócios
-├── Repositories/ # Acesso a dados
-├── Models/ # Entidades
-├── DTOs/ # Objetos de transferência de dados
-├── Validators/ # Validações
-└── Configurations/ # Configurações
+    src/
+    ├── Controllers/     # Controladores da API
+    ├── Services/        # Lógica de negócios
+    ├── Repositories/    # Acesso a dados
+    ├── Models/          # Entidades
+    ├── DTOs/           # Objetos de transferência de dados
+    ├── Validators/      # Validações
+    └── Configurations/  # Configurações
 
 ## 🔒 Segurança
 
@@ -186,14 +186,14 @@ dotnet run
 
 ## 📦 Project Structure
 
-src/
-├── Controllers/ # API Controllers
-├── Services/ # Business Logic
-├── Repositories/ # Data Access
-├── Models/ # Entities
-├── DTOs/ # Data Transfer Objects
-├── Validators/ # Validations
-└── Configurations/ # Settings
+    src/
+    ├── Controllers/     # API Controllers
+    ├── Services/        # Business Logic
+    ├── Repositories/    # Data Access
+    ├── Models/          # Entities
+    ├── DTOs/           # Data Transfer Objects
+    ├── Validators/      # Validations
+    └── Configurations/  # Settings
 
 ## 🔒 Security
 
