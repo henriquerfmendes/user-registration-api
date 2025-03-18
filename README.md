@@ -104,3 +104,112 @@ ou
 ```
 https://localhost:7203/swagger
 ```
+
+---
+
+# User Registration API
+
+REST API for user management with JWT authentication, developed in ASP.NET Core 8.0.
+
+## 🚀 Features
+
+- JWT Authentication
+- Complete user CRUD
+- Secure password hashing
+- Data validation
+- Swagger documentation
+
+## 🛠️ Technologies
+
+- ASP.NET Core 8.0
+- Entity Framework Core
+- MySQL
+- JWT Authentication
+- Swagger
+
+## 📋 Prerequisites
+
+- .NET 8.0 SDK
+- MySQL Server
+- IDE (VS Code, Visual Studio)
+
+## ⚙️ Setup
+
+1. Clone the repository
+```bash
+git clone https://github.com/henriquerfmendes/user-registration-api.git
+cd user-registration-api
+```
+
+2. Configure the database connection string in `appsettings.json`
+```json
+{
+    "ConnectionStrings": {
+        "DefaultConnection": "Server=localhost;Database=UserRegistrationDb;User=user_example;Password=password_example;"
+    }
+}
+```
+
+3. Configure JWT credentials in `appsettings.json`
+```json
+{
+    "JwtConfig": {
+        "Secret": "this_is_a_super_secret_key_with_minimum_32_chars_here_2024",
+        "Issuer": "UserRegistrationAPI",
+        "Audience": "UserRegistrationClient",
+        "ExpirationInMinutes": 60
+    }
+}
+```
+
+4. Run migrations
+```bash
+dotnet ef database update
+```
+
+5. Start the application
+```bash
+dotnet run
+```
+
+## 🔀 Endpoints
+
+### Authentication
+- `POST /api/auth/login` - User login
+
+### Users
+- `POST /api/user` - Create user
+- `GET /api/user` - List users (requires authentication)
+- `GET /api/user/{id}` - Get user by ID (requires authentication)
+- `PUT /api/user/{id}` - Update user (requires authentication)
+- `DELETE /api/user/{id}` - Delete user (requires authentication)
+
+## 📦 Project Structure
+
+src/
+├── Controllers/ # API Controllers
+├── Services/ # Business Logic
+├── Repositories/ # Data Access
+├── Models/ # Entities
+├── DTOs/ # Data Transfer Objects
+├── Validators/ # Validations
+└── Configurations/ # Settings
+
+## 🔒 Security
+
+- Passwords stored with hash + salt
+- JWT Authentication
+- Token validation
+- Protection against duplicate emails
+
+## 📝 Documentation
+
+The API documentation is available via Swagger UI at:
+
+```
+http://localhost:5203/swagger
+```
+or
+```
+https://localhost:7203/swagger
+```
