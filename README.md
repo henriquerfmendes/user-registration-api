@@ -17,6 +17,8 @@ API REST para gerenciamento de usuários com autenticação JWT, desenvolvida em
 - MySQL
 - JWT Authentication
 - Swagger
+- xUnit (Testes Unitários)
+- Moq (Framework de Mock para Testes)
 
 ## 📋 Pré-requisitos
 
@@ -85,6 +87,8 @@ dotnet run
     ├── DTOs/           # Objetos de transferência de dados
     ├── Validators/      # Validações
     └── Configurations/  # Configurações
+    tests/
+    └── Validators/      # Testes unitários dos validadores
 
 ## 🔒 Segurança
 
@@ -92,6 +96,16 @@ dotnet run
 - Autenticação via JWT
 - Validação de tokens
 - Proteção contra emails duplicados
+
+## 🧪 Testes
+
+O projeto utiliza xUnit para testes unitários:
+
+```bash
+dotnet test
+
+dotnet test --logger "console;verbosity=detailed"
+```
 
 ## 📝 Documentação
 
@@ -126,6 +140,8 @@ REST API for user management with JWT authentication, developed in ASP.NET Core 
 - MySQL
 - JWT Authentication
 - Swagger
+- xUnit (Unit Tests)
+- Moq (Mocking Framework for Tests)
 
 ## 📋 Prerequisites
 
@@ -194,6 +210,8 @@ dotnet run
     ├── DTOs/           # Data Transfer Objects
     ├── Validators/      # Validations
     └── Configurations/  # Settings
+    tests/
+    └── Validators/      # Validator unit tests
 
 ## 🔒 Security
 
@@ -201,6 +219,16 @@ dotnet run
 - JWT Authentication
 - Token validation
 - Protection against duplicate emails
+
+## 🧪 Tests
+
+The project uses xUnit for unit testing:
+
+```bash
+dotnet test
+
+dotnet test --logger "console;verbosity=detailed"
+```
 
 ## 📝 Documentation
 
