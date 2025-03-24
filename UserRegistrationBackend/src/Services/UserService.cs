@@ -35,7 +35,7 @@ public class UserService
 
     public async Task<UserResponseDTO> Create(CreateUserDTO userDTO)
     {
-        await _userValidator.ValidateEmail(userDTO.Email);
+        await _userValidator.ValidateCreateUser(userDTO);
 
         var user = new User
         {

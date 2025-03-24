@@ -10,5 +10,5 @@ public interface IUserRepository
     Task<bool> EmailExists(string email);
     Task<User> Update(User user);
     Task<bool> Delete(User user);
-    Task<User> GetByEmail(string email);
+    Task<User?> GetByEmail(string email);
 }

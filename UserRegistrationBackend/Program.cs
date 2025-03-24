@@ -28,13 +28,15 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 
 builder.Services.Configure<JwtConfig>(builder.Configuration.GetSection("JwtConfig"));
 
+var jwtConfig = builder.Configuration.GetSection("JwtConfig").Get<JwtConfig>() 
+    ?? throw new InvalidOperationException("JwtConfig section is missing in configuration");
+
 builder.Services.AddAuthentication(options =>
 {
     options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
     options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
 }).AddJwtBearer(options =>
 {
-    var jwtConfig = builder.Configuration.GetSection("JwtConfig").Get<JwtConfig>();
     var key = Encoding.ASCII.GetBytes(jwtConfig.Secret);
 
     options.TokenValidationParameters = new TokenValidationParameters
